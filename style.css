@@ -1,0 +1,101 @@
+
+/* changing column sizes with mq and flex*/
+
+* {
+    box-sizing: border-box;
+  }
+
+  #column_color1 {
+    background-color: #aaa;
+    box-shadow: 2px 3px 5px 5px;
+  }
+
+  #column_color2 {
+    background-color: #bbb;
+    box-shadow: 5px 2px 5px 2px;
+  }
+
+  #column_color3 {
+    background-color: #ccc;
+    box-shadow: 5px 3px 3px 4px;
+  }
+
+  #column_color4 {
+    background-color: #ddd;
+    box-shadow: 5px 2px 5px 5px;
+  }
+
+
+  
+  /* Container for flexboxes */
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  /* Create four equal columns */
+  .column {
+    flex: 25%;
+    padding: 20px;
+  }
+  
+  /* On screens that are 992px wide or less, go from four 
+  columns to two columns */
+  @media screen and (max-width: 992px) {
+    .column {
+      flex: 50%;
+
+    }
+    p {
+        font-size: 20px;
+    }
+  }
+  
+  /* On screens that are 600px wide or less, make the 
+  columns stack on top of each other instead of next to 
+  each other */
+  @media screen and (max-width: 600px) {
+    .row {
+      flex-direction: column;
+    }
+  }
+
+
+
+
+
+/* changing image with media queries*/
+div.example{
+    padding: 40px;
+    border: 5px solid black;
+    background: green;
+    color: red;
+    font-size: 35px;
+
+
+}
+
+
+@media screen and (max-width: 900px) and (min-width: 600px), (min-width: 1100px) {
+    div.example {
+      font-size: 50px;
+      padding: 50px;
+      border: 8px solid black;
+      background: yellow;
+    }
+  }
+
+
+
+@media screen {
+    .print_media {
+      color: green; 
+    }
+  }
+  
+  @media print {
+    .print_media {
+      color: purple; 
+    }
+  }
+
